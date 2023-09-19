@@ -1,3 +1,4 @@
+/*Funções método GET */
 const getAllUsersData = async () => {
     let url = 'http://localhost:3000/user/all';
     fetch(url, {
@@ -23,6 +24,7 @@ const getAllUsersData = async () => {
         })
         .catch((error) => {
             console.error('Error:', error);
+            document.getElementById("container-result-users").innerHTML = `<div style= "width: 100%; text-align: center; height: 100%;"> Ops.. nenhum usuário cadastrado :( </div>`
         });
 }
 
@@ -41,6 +43,7 @@ const getUserIDtoEdit = async (id) => {
         });
 }
 
+/*Função método POST */
 const postUser= (input_user, input_mail) => {
     const formData = new FormData();
     formData.append('name', input_user.toLowerCase());
@@ -72,6 +75,7 @@ const postUser= (input_user, input_mail) => {
         });
 }
 
+/*Função método PUT*/
 const updateUser = (input_user, input_mail) => {
     const formData = new FormData();
     formData.append('name', input_user.toLowerCase());
@@ -100,6 +104,7 @@ const updateUser = (input_user, input_mail) => {
         });
 }
 
+/*Função método DELETE */
 const deleteUser = (user) => {
     let url = 'http://localhost:3000/user/delete?name=' + user;
     fetch(url, {
@@ -123,6 +128,7 @@ const deleteUser = (user) => {
     
 }
 
+/*Funções */
 function verifyValues() {
     i_mail = document.getElementById("id-email-user").value
     i_user = document.getElementById("id-username-user").value
@@ -135,7 +141,6 @@ function verifyValues() {
     }
 
 }
-
 
 function editUser(id) {
     document.getElementById("btn-edit-user").style.display= "block"
@@ -171,7 +176,6 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-
 async function showRandomEmoji(name) {
     let url = 'https://emoji-api.com/emojis?access_key=1ef7f6aef4c2e4248e03b37f0d5d2182915ea0be';
     fetch(url, {
@@ -187,4 +191,5 @@ async function showRandomEmoji(name) {
         });
 }
 
+/*Chamando todos os usuários */
 getAllUsersData()

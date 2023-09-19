@@ -92,6 +92,7 @@ const getAllComments = async () => {
         })
         .catch((error) => {
             console.error('Error:', error);
+            document.getElementById("container-results").innerHTML = `<div style= "width: 100%; text-align: center; height: 100%;"> Ops.. nenhum comentário encontrado :( </div>`
         });
 }
 
@@ -205,9 +206,6 @@ function editComment() {
 
 
 }
-
-
-
 
 /*Chamar todos os comentários */
 getAllComments()
