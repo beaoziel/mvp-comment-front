@@ -3,7 +3,7 @@
 # Índice 
 * [Índice](#índice)
 * [Descrição do Projeto](#descrição-do-projeto)
-* [Funcionalidades](#funcionalidades)
+* [Arquitetura escolhida](#arquitetura-escolhida)
 * [Acesso ao projeto](#acesso-ao-projeto)
 * [Tecnologias utilizadas](#tecnologias-utilizadas)
 * [Pessoas Desenvolvedoras do Projeto](#autores)
@@ -17,7 +17,8 @@
 ## 📐 Arquitetura escolhida
 <p>
   Para garantir uma melhor experiência do usuário, foi decido separar em 4 componentes independentes:
-</p> 
+</p>
+
 ![Desenho da solução](https://github.com/beaoziel/mvp-comment-front/assets/61751794/b0531533-7898-4cd4-9bec-9e59db59d3f5)
 
 - `Front-end`: Para interação do usuário e visualização dos comentários, um front irá receber todas as informações, condumindo as 3 APIS
