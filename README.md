@@ -20,10 +20,10 @@
 </p> 
 ![Desenho da solução](https://github.com/beaoziel/mvp-comment-front/assets/61751794/b0531533-7898-4cd4-9bec-9e59db59d3f5)
 
--`Front-end`: Para interação do usuário e visualização dos comentários, um front irá receber todas as informações, condumindo as 3 APIS
--`API Externa`: Evitando o trabalho de ter uma base única, consumimos de uma API que garante a variedade dos emojis, já separados em categorias
--`Comments`: Componente para gerenciar todos os comentários e armazená-los em um banco do próprio componente
--`Users`: Componente para gerenciar os usuários, também com seu prórpio banco.
+- `Front-end`: Para interação do usuário e visualização dos comentários, um front irá receber todas as informações, condumindo as 3 APIS
+- `API Externa`: Evitando o trabalho de ter uma base única, consumimos de uma API que garante a variedade dos emojis, já separados em categorias
+- `Comments`: Componente para gerenciar todos os comentários e armazená-los em um banco do próprio componente
+- `Users`: Componente para gerenciar os usuários, também com seu prórpio banco.
 
 Com o uso de containers, foi possível melhor gerenciar o desenvolvimento já que apresentam diversas vantagens como isolamento de aplicações, portabilidade, escalabilidade, atualizações e implatações contínuas, entre outros.
 
