@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style/style.css">
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <title> COMMENT! </title>
+</head>
+
+<body style="background-image: url('img/background.jpg');">
+    <section id="section-header">
+        <div class="user-box">
+            <a href="users.html"><img src="img/user.png"></a>
+        </div>
+        <h1>COMMENT!</h1>
+        <h4>Adicione comentários ao seu mural</h4>
+    </section>
+
+    <section id="section-status">
+        <span id="message-status"></span>
+    </section>
+
+    <section id="section-comments">
+        
+        <div class="box-comment">
+            <div>
+                <label for="username"> User </label>
+                <select name="username" id="id-username">
+                    <option value="null">--Selecionar--</option>
+                </select>
+
+                <label for="title"> Título </label>
+                <input name="title" type="text" maxlength="200" id="id-title" />
+
+                <label for="emoji" id="label-emoji"> Emoji </label>
+                <div id="emoji-input" onclick="getAllEmojis(false)">Selecione</div>
+                <input name="emoji" style="display: none;" id="id-emoji" />
+
+                <label for="text"> Texto </label>
+                <textarea name="text" type="text" maxlength="200" id="id-text"> </textarea>
+
+                <button onclick="addComment()" style="font-family: 'Lexend';"> Comentar </button>
+            </div>
+        </div>
+        <div class="box-results" id="container-results"> </div>
+    </section>
+
+
+    <div id="modal" >
+        <div id="emoji-box"></div>
+        <div id="edit-box">
+                <h2> Editar comentário</h2>
+            
+                <label for="username"> Username </label>
+                <select name="username" id="id-username-edit">
+                    <option value="null">--Selecionar--</option>
+                </select>
+
+                <label for="title"> Título (Não editável) </label>
+                <input name="title" type="text" maxlength="200" id="id-title-edit" readonly="readonly" />
+
+                <label for="emoji" id="label-emoji"> Emoji </label>
+                <div id="emoji-input-edit" onclick="getAllEmojis(true)"></div>
+                <input name="emoji" style="display: none;" id="id-emoji-edit" />
+
+                <label for="text"> Texto </label>
+                <textarea name="text" type="text" maxlength="200" id="id-text-edit"> </textarea> 
+
+                <button onclick="editComment()" style="font-family: 'Lexend';"> EDITAR!</button>
+                <div id="edit-errors" style="color: red;"> </div>
+
+        </div>
+    </div>
+
+    
+
+    <script src="scripts/scriptEmojis.js"></script>
+    <script src="scripts/scriptUsers.js"></script>
+    <script src="scripts/scriptComment.js"></script>
+
+</body>
+
+</html>

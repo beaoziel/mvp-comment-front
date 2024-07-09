@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style/style.css">
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <title> COMMENT! </title>
+</head>
+
+<body style="background-image: url('img/background-user.jpg');">
+    <section id="section-header">
+        <div class="user-box">
+            <a href="index.html"><img src="img/home.png"></a>
+        </div>
+        <h1>COMMENT!</h1>
+        <h4>Adicione autores para os seus comentários</h4>
+    </section>
+
+    <section id="section-status">
+        <span id="message-status-user"></span>
+    </section>
+
+    <section id="section-comments">
+        
+        <div class="container-box-user">
+            <img src="img/edit.png" id="id-icon-edit">
+            <div class="box-user">
+                <label for="username"> Username </label>
+                <input name="username" type="text" maxlength="200" id="id-username-user" />
+                
+                <label for="email"> E-mail </label>
+                <input name="email" type="email" maxlength="200" id="id-email-user" />
+
+                <button onclick="handleUser('post')" id="btn-add-user" style="font-family: 'Lexend';"> Adicionar </button>
+                <button onclick="handleUser('put')" id="btn-edit-user" style="font-family: 'Lexend'; display: none;"> Editar </button>
+            </div>
+        </div>
+        <div class="box-results" id="container-result-users">
+          
+        </div>
+    </section>
+
+
+    <script src="scripts/scriptUserPage.js"></script>
+
+
+</body>
+
+</html> 

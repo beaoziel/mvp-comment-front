@@ -1,0 +1,367 @@
+body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    border: 0;
+    background-repeat: no-repeat;
+    font-family: 'Lexend', sans-serif;
+  }
+
+  body button:hover {
+    transform: scale(1.05);
+  }
+  
+  /*Modal emoji*/
+  #modal{
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+  }
+
+  #emoji-box{
+    background-color: #fefefe;
+    margin: 3% auto;
+    padding: 8vh;
+    border: 1px solid #888;
+    width: 80%; 
+    height: 65%;
+    overflow-y: scroll;
+    z-index: 1;
+    position: fixed;
+    left: 5%;
+    flex-direction: column;
+  }
+
+  #emoji-box span {
+    margin-bottom: 0.5vh;
+    text-transform: capitalize;
+  }
+
+  .row-display{
+    margin-top: 0;
+    margin-bottom: 5vh;
+    overflow-x: hidden;
+    max-height: 15vh;
+    padding: 5vh;
+  }
+
+  .row-display::-webkit-scrollbar {
+    width: 6px;
+    background: white; 
+  }
+
+  .row-display::-webkit-scrollbar-thumb {
+    background: #cfcfcf; 
+    border-radius: 5px;
+  }
+
+  .row-display button {
+        border: none;
+        margin: 0.5vh;
+        padding: 0.5vh;
+  }
+
+  .row-display button:hover {
+    transform: scale(1.25);
+  }
+
+  /*Modal edit*/
+    #edit-box{
+    background-color: #b1b8a4;
+    margin: 3% auto;
+    padding: 8vh;
+    border: 1px solid #888;
+    width: 40%; 
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: black;
+  }
+
+  #edit-box input, select{
+    height: 3vh;
+    padding-left: 1vh;
+    border-radius: 10px;
+    color: black;
+  }
+
+  #edit-box textarea{
+    height: 5vh;
+    max-width: 100%;
+    margin-bottom: 1vh;
+    padding: 1vh;
+    border-radius: 10px;
+  }
+
+  #edit-box h2{
+   font-weight: 200;
+   text-transform: uppercase;
+   text-align: center;
+  }
+
+  #emoji-input-edit {
+    cursor: pointer;
+    height: 60px;
+    font-size: 4vh;
+  }
+
+  /*Header*/
+  #section-header{
+    width: 100%;
+    margin: 3vh;
+  }
+
+  #section-header h1 {
+    font-size: 7vh;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    color: #b1c97a;
+  }
+
+  #section-header h4 {
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .user-box{
+    height: 5vh;
+    margin-left: 3vh;
+  }
+
+  .user-box a img {
+    height: 5vh;
+    cursor: pointer;
+  }
+
+/*Mensagem de erro*/
+#section-status{
+  width: 100%;
+  margin-left: 15vh;
+  margin-top: 3vh;
+  color: rgb(107, 23, 23);
+}
+
+/*Adicionar comentario*/
+  
+  #section-comments{
+    margin-top: 6vh;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-evenly;
+  }
+
+  .box-comment{
+    width: 30%;
+    background-color: #AFC97E;
+    padding: 2vh;
+    border-radius: 15px;
+    height: 55vh;
+    padding: 3vh;
+  }
+
+  .box-comment div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .box-comment label {
+    font-weight: 300;
+    padding-right: 1vh;
+    padding-top: 1.5vh;
+  }
+
+  .box-comment div input, select, textarea{
+    width: 90%;
+    margin: 1vh;
+    border-radius: 10px;
+    border: none;
+    padding: 0.5vh;
+  }
+
+  .box-comment input:focus {
+    outline: none;
+  }
+
+  .box-comment div textarea {
+    max-width: 100%;
+    max-height: 100px;
+  }
+
+
+  .box-comment button {
+   margin-left: 80%;
+   margin-top: 2vh;
+   height: 4vh;
+   border: 0;
+   background-color: #d5e6b4;
+   cursor: pointer;
+  }
+  
+  #id-text{
+    height: 15vh;
+    
+  }
+
+  #emoji-input{
+    height: 5vh;
+    cursor: pointer;
+    margin-top: 1vh;
+    padding: 2vh;
+  }
+
+  /*Resultados*/
+  .box-results{
+    width: 50%;
+    background-color: #AFC97E;
+    padding: 2vh;
+    border-radius: 15px;
+    overflow-y: scroll;
+    padding: 3vh;
+    height: 55vh;
+  }
+
+  .box-results::-webkit-scrollbar {
+    width: 6px;
+    background: none;
+  }
+
+  .box-results::-webkit-scrollbar-thumb {
+    background: #686868; 
+    border-radius: 10px;
+  }
+
+  .result{
+    display: flex;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    padding: 2vh
+  }
+
+  .user-result{
+    padding: 2vh;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .user-result span{
+    width: 50%;
+    background-color: rgb(132, 56, 155);
+    border-radius: 100%;
+  }
+
+  .content-result {
+    width: 80%;
+    padding-right: 3vh;
+    padding-left: 5vh;
+  }
+
+  .title-result{
+    height: 6vh;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+  }
+
+  .text-result{
+    max-height: 60%;
+    overflow-y: scroll;
+  }
+
+  .text-result::-webkit-scrollbar {
+    width: 6px;
+    background: none;
+  }
+
+  .text-result::-webkit-scrollbar-thumb {
+    background: #686868; 
+    border-radius: 10px;
+  }
+
+  .remove-result {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly
+  }
+
+  .remove-result img{
+    margin: 1vh;
+   height: 30px;
+   cursor: pointer;
+  }
+
+  /*USUARIOS*/
+  .container-box-user{
+    width: 30%;
+    background-color: #AFC97E;
+    padding: 2vh;
+    border-radius: 15px;
+    height: 30vh;
+    padding: 3vh;
+  }
+
+  .container-box-user img{
+    height: 3vh;
+    display: none;
+  }
+
+  .box-user{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 6vh;
+  }
+
+.box-user button{
+  margin-top: 3vh;
+  border: none;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 3vh;
+  padding-right: 3vh;
+  cursor: pointer;
+  background-color: #d5e6b4;
+}
+
+.box-user input {
+  padding: 0.8vh;
+  text-align: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: none;
+}
+
+.box-user input:focus {
+  outline: none;
+}
+
+.user-icon {
+    padding: 2vh;
+    width: 15%;
+    font-size: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
